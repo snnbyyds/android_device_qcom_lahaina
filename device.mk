@@ -44,6 +44,9 @@ PRODUCT_PACKAGES += \
     ueventd-odm.rc \
     ueventd.qcom.rc
 
+# Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
