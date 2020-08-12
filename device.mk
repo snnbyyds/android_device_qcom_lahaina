@@ -387,7 +387,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.qcom-libperfmgr
+    android.hardware.power-service.qcom-libperfmgr \
+    libqti-perfd-client
 
 # Qcom Parts
 PRODUCT_PACKAGES += \
