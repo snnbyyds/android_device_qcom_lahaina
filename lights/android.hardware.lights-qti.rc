@@ -3,3 +3,4 @@ service vendor.light-qti /vendor/bin/hw/android.hardware.lights-service.qti
     user system
     group system
     shutdown critical
+    task_profiles ServiceCapacityLow
