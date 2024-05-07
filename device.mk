@@ -409,6 +409,7 @@ PRODUCT_PACKAGES += \
     LahainaSettings \
     LahainaSystemUI \
     SystemUIResCommon \
+    TelecommResCommon \
     TelephonyResCommon \
     WifiResCommon \
     WifiResTarget
