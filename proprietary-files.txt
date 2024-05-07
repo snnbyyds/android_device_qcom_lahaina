@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from LA.UM.9.14.1.r1-12200-QCM6490.QSSI13.0 (vendor) and LA.QSSI.13.0.r1-10000.03-qssi.0 (system)
+## from LA.UM.9.14.1.r1-12200-QCM6490.QSSI13.0 (vendor) and LA.QSSI.14.0.r1-13500-qssi.0 (system)
 
 # ACDBs
 vendor/etc/acdbdata/CDP/CDP_Bluetooth_cal.acdb
@@ -631,7 +631,6 @@ vendor/firmware/yupik_ipa_fws.elf
 vendor/firmware/yupik_ipa_fws.mdt
 
 # Diag
-system_ext/lib/vendor.qti.diaghal@1.0.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
@@ -727,6 +726,7 @@ system_ext/lib64/libdpmctmgr.so
 system_ext/lib64/libdpmfdmgr.so
 system_ext/lib64/libdpmframework.so
 system_ext/lib64/libdpmtcm.so
+system_ext/lib64/vendor.qti.hardware.dpmaidlservice-V1-ndk.so
 system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmQmiMgr
@@ -735,7 +735,6 @@ vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 
 # DRM
-system_ext/lib64/vendor.qti.hardware.qseecom@1.0.so
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
 vendor/etc/gpfspath_oem_config.xml
@@ -884,13 +883,16 @@ system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
+system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
-system_ext/lib/libimsmedia_jni.so
-system_ext/lib64/com.qualcomm.qti.imscmservice@2.0.so
-system_ext/lib64/com.qualcomm.qti.imscmservice@2.1.so
-system_ext/lib64/com.qualcomm.qti.imscmservice@2.2.so
-system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
-system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so
+system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
@@ -898,9 +900,6 @@ system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
-system_ext/lib64/vendor.qti.ims.callinfo@1.0.so
-system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so
-system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 system_ext/priv-app/ims/ims.apk
@@ -1005,6 +1004,7 @@ vendor/lib64/libmulawdec.so
 system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
 system_ext/lib64/libmmosal.so
+system_ext/lib64/libmmparser_lite.so
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/init.qti.media.sh
 vendor/etc/init/init.qti.media.rc
@@ -1176,8 +1176,7 @@ vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
 # Power-off alarm
-product/app/PowerOffAlarm/PowerOffAlarm.apk
-system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
+system_ext/app/PowerOffAlarm/PowerOffAlarm.apk
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
@@ -1259,6 +1258,13 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
 vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 
 # RIL
+product/app/uimgbaservice/uimgbaservice.apk
+product/etc/permissions/UimGba.xml
+product/etc/permissions/UimGbaManager.xml
+product/etc/permissions/UimService.xml
+product/framework/uimgbalibrary.jar
+product/framework/uimgbamanagerlibrary.jar
+product/framework/uimservicelibrary.jar
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
@@ -1388,24 +1394,6 @@ vendor/lib64/vendor.qti.ims.rcssip@1.2.so
 vendor/lib64/vendor.qti.ims.rcsuce@1.0.so
 vendor/lib64/vendor.qti.ims.rcsuce@1.1.so
 vendor/lib64/vendor.qti.ims.rcsuce@1.2.so
-
-# Radio
-system_ext/app/embms/embms.apk
-system_ext/app/uceShimService/uceShimService.apk
-system_ext/etc/permissions/com.qualcomm.location.xml
-system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
-system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
-system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml
-system_ext/etc/permissions/com.qualcomm.qti.izattools.xml
-system_ext/etc/permissions/embms.xml
-system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar
-system_ext/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar
-system_ext/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar
-system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar
-system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar
-system_ext/framework/embmslibrary.jar
-system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar
-system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar
 
 # Secure element
 vendor/bin/hw/vendor.qti.secure_element@1.2-service
@@ -1697,8 +1685,6 @@ vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Trusted User Interface
-system_ext/lib/vendor.qti.hardware.tui_comm@1.0.so
-system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
@@ -1818,53 +1804,50 @@ vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
 vendor/etc/wifi/icm.conf
 
-# WiFi Display - from LE2121 14.0.0.210(EX01)
-system/framework/WfdCommon.jar|a661c494d064b79a3f71579592411fada1ea232f
-system_ext/bin/wfdservice|400d123df78c1ed2e9643ff3ddf5ee5748f954fe
-system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c
-system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml|10dcd4e58f0652d800d48ae5b76e4fab43fda214
-system_ext/etc/seccomp_policy/wfdservice.policy|5b3592c965f16b2d55ac89d56d8d3c49a6b5800b
-system_ext/etc/wfdconfigsink.xml|cb78df66948314a75080a4161321fb3111a0785a
-system_ext/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|cb88bc73bf9f44d7da000a41d38b309ffdf71370
-system_ext/lib/libmmrtpdecoder.so|4fc76315f11ff5fe416f36b66c9422ef05eae182
-system_ext/lib/libmmrtpencoder.so|0fa2096eec29eec395f6bd88d7d1049a127e090c
-system_ext/lib/libwfdavenhancements.so|581db496334d2adb76e6c6af67620f49ca24eabd
-system_ext/lib/libwfdclient.so|a9639d9f269880700bac6fc06e8302702fb0ab32
-system_ext/lib/libwfdcommonutils.so|b738182e77f3e7faf72460f09ebdfca7de5e0c23
-system_ext/lib/libwfdconfigutils.so|a52a96e2699f3a5ad79838e356cd90838e26218b
-system_ext/lib/libwfddisplayconfig.so|f46fe63fb3d58c143dc92741a962167af3d8b928
-system_ext/lib/libwfdmminterface.so|5844114d7cc823090a70fe4f44cbda0ddf585ebd
-system_ext/lib/libwfdmmsink.so|23fb5c836fc06865b229c30b46998e41c0624dac
-system_ext/lib/libwfdmmsrc_system.so|0adfc69a5560158f3a6803ba720acc795d6d05dc
-system_ext/lib/libwfdrtsp.so|afd69963c2bd59bdb3ff23e01710c61ed90c5d87
-system_ext/lib/libwfdservice.so|07e6d0e00393a8c068f75b46531d2e75fdaebde2
-system_ext/lib/libwfdsinksm.so|875171cc6ae534dd941eec1c87b78d5961e19c06
-system_ext/lib/libwfduibcinterface.so|e90fa4920b010bd6ef2bd78c2d2644cbd0fcbffa
-system_ext/lib/libwfduibcsink.so|91af548471c395a958e6155dd9be19cccbe482d3
-system_ext/lib/libwfduibcsinkinterface.so|bc0e7dca28d1e5cbc6caf5bd5378f3e6db3b460c
-system_ext/lib/libwfduibcsrc.so|a0b1c73015c449468db0d2776fdfcc56dfeee53b
-system_ext/lib/libwfduibcsrcinterface.so|2e24ec6a075407664488b4214eef35cb2ca845f4
-system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so|45a0a8cd9f1aa5cbe69b113192d42bc42e32e9c3
-system_ext/lib64/libmmparser_lite.so|59d550a52773722f1fe515bd5fba86918cf6f54e
-system_ext/lib64/libmmrtpdecoder.so|0da526d51135ea58236ab6bcc2d1b7484931df24
-system_ext/lib64/libmmrtpencoder.so|fafe00d1ed3d691c6d2c2d963144218764cad5ae
-system_ext/lib64/libwfdclient.so|0070b1e88cee6ebaf17dcb02c2706232cc087071
-system_ext/lib64/libwfdcommonutils.so|14b3bd86703f2aca0abb1232d2304e626c1af644
-system_ext/lib64/libwfdconfigutils.so|6f1a3a862ddde4245ea58ad310101df620d3a00b
-system_ext/lib64/libwfddisplayconfig.so|5fd7bf7abaedfe890442f88183c49755b25c39aa
-system_ext/lib64/libwfdmminterface.so|3f16acefbe87741a5841c1c70cf74ff917299c4c
-system_ext/lib64/libwfdmmsink.so|8150b750357b606475521b491f78d566673f9888
-system_ext/lib64/libwfdnative.so|6d6dad5e631bc4d63463f608c47f3f9e5493944f|e7e24b54bfa2e3d4a4037fed085eaee49caeb3ac
-system_ext/lib64/libwfdrtsp.so|8181e44d7c1f722218fabd8fe3bf788454a3f586
-system_ext/lib64/libwfdsinksm.so|c4d68ecbe0accd24296c18444e5a82b6a24be8d8
-system_ext/lib64/libwfduibcinterface.so|dca32fe063bdba7ce3b131b16cf112b793ae03ad
-system_ext/lib64/libwfduibcsink.so|63ea93b1a6aec75a294baf50007270807a819e21
-system_ext/lib64/libwfduibcsinkinterface.so|39c123bd9a4d7a8fa317f8ed4d86972dcfab0423
-system_ext/lib64/libwfduibcsrc.so|5557f3bd58c37b7e3b28e13f2f86d55930b14ab6
-system_ext/lib64/libwfduibcsrcinterface.so|77cead9bf7b60384fe1e11dc2b25bd99af0b4608
-system_ext/priv-app/WfdService/WfdService.apk|7191da7d336f6018ee292af4e69167677b9f5bd1
-
 # WiFi Display
+system/framework/WfdCommon.jar
+system_ext/bin/wfdservice
+system_ext/etc/init/wfdservice.rc
+system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml
+system_ext/etc/seccomp_policy/wfdservice.policy
+system_ext/etc/wfdconfigsink.xml
+system_ext/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
+system_ext/lib/libmmrtpdecoder.so
+system_ext/lib/libmmrtpencoder.so
+system_ext/lib/libwfdavenhancements.so
+system_ext/lib/libwfdclient.so
+system_ext/lib/libwfdcommonutils.so
+system_ext/lib/libwfdconfigutils.so
+system_ext/lib/libwfddisplayconfig.so
+system_ext/lib/libwfdmminterface.so
+system_ext/lib/libwfdmmsink.so
+system_ext/lib/libwfdmmsrc_system.so
+system_ext/lib/libwfdrtsp.so
+system_ext/lib/libwfdservice.so
+system_ext/lib/libwfdsinksm.so
+system_ext/lib/libwfduibcinterface.so
+system_ext/lib/libwfduibcsink.so
+system_ext/lib/libwfduibcsinkinterface.so
+system_ext/lib/libwfduibcsrc.so
+system_ext/lib/libwfduibcsrcinterface.so
+system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
+system_ext/lib64/libmmrtpdecoder.so
+system_ext/lib64/libmmrtpencoder.so
+system_ext/lib64/libwfdclient.so
+system_ext/lib64/libwfdcommonutils.so
+system_ext/lib64/libwfdconfigutils.so
+system_ext/lib64/libwfddisplayconfig.so
+system_ext/lib64/libwfdmminterface.so
+system_ext/lib64/libwfdmmsink.so
+system_ext/lib64/libwfdnative.so
+system_ext/lib64/libwfdrtsp.so
+system_ext/lib64/libwfdsinksm.so
+system_ext/lib64/libwfduibcinterface.so
+system_ext/lib64/libwfduibcsink.so
+system_ext/lib64/libwfduibcsinkinterface.so
+system_ext/lib64/libwfduibcsrc.so
+system_ext/lib64/libwfduibcsrcinterface.so
+system_ext/priv-app/WfdService/WfdService.apk
 vendor/bin/wifidisplayhalservice
 vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
