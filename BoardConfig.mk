@@ -125,6 +125,7 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     hdmi_dlkm.ko \
     hid-aksys.ko \
     it913x.ko \
+    kernelsu.ko \
     llcc_perfmon.ko \
     m88rs6000t.ko \
     machine_dlkm.ko \
@@ -235,6 +236,7 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 BOOT_KERNEL_MODULES := \
     adsp_loader_dlkm.ko \
     apr_dlkm.ko \
+    kernelsu.ko \
     msm_drm.ko \
     q6_notifier_dlkm.ko \
     q6_pdr_dlkm.ko \
