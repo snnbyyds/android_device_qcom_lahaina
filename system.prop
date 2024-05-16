@@ -8,4 +8,4 @@ persist.vendor.ims.disableIMSLogs=1
 persist.vendor.ims.disableQXDMLogs=1
 
 # Multi-Gen LRU
-persist.device_config.mglru_native.lru_gen_config=core
+persist.device_config.mglru_native.lru_gen_config=core_and_mm_walk
