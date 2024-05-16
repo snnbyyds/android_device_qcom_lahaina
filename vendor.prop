@@ -166,9 +166,6 @@ ro.hardware.keystore_desede=true
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
 
-# Multi-Gen LRU
-persist.device_config.mglru_native.lru_gen_config=core
-
 # OEM Unlock
 ro.oem_unlock_supported=1
 
