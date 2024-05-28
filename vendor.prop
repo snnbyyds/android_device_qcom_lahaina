@@ -163,6 +163,7 @@ ro.crypto.volume.metadata.method=dm-default-key
 ro.hardware.keystore_desede=true
 
 # Media
+debug.stagefright.c2inputsurface=-1
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
 
